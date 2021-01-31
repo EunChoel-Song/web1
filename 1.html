@@ -1,22 +1,75 @@
+
+
 <!doctype html>
 <html>
 <head>
 	<title>Market Cap</title>
 	<meta charset="utf-8">
+	<style>
+		a {
+    color:blue;
+    
+	}
+	h1 {
+		font-size:60px;
+		text-align:center;
+		border-bottom:gray solid 2px;
+		margin:0px;
+		padding-bottom:10px;
+	}
+	.index ol{
+		/* index라고 하는 class 밑에 있는 <ol>이라고 하면 의미가 더 명확해진다.  */
+		font-size:20px;
+		border-right:gray solid 2px;
+		width:130px;
+		margin:0px;
+		padding-top:20px;
+		padding-bottom:600px;
+		padding-right:40px;
+	}
+	.index{
+		display:grid;
+		grid-template-columns: 250px 1fr;
+	}
+	@media(max-width: 800px) {
+		.index{
+			display:block;
+		}
+		h1{
+			border-bottom:none;
+		}
+		.index ol{
+			border-right:none;
+			width:0px;
+			margin:0px;
+			padding-top:0px;
+			padding-bottom:0px;
+			padding-right:0px;
+		}
+	}
+	</style>
 </head>
 <body>
 	<h1>Market Capitalization</h1>
-	<h2>ranking of the world's top automakers by market capitalization</h2>
-	<ol>
-		<li><a href="Tesla.html">Tesla</li></a>
-		<li><a href="Toyota.html">Toyota</li></a>
-		<li><a href="Volkswagen.html">Volkswagen</li></a>
-	</ol>
 	
-	<p> Market cap—or market capitalization—refers to the total value of all a
-	company's shares of stock.<br>It is calculated by multiplying the price of a stock
-	by its total number of outstanding shares.<br>For example, a company with 20 million 
-    shares selling at $50 a share would have a market cap of $1 billion.</P>
-    <img src="auto market cap.jpg" width="50%">
+	<div class="index">
+		<div>
+		<ol>
+			<li><a href="Tesla.html">Tesla</li></a>
+			<li><a href="Toyota.html" >Toyota</li></a>
+			<li><a href="Volkswagen.html">Volkswagen</li></a>
+		</ol>
+		</div>
+<!-- <ol> 이라는 tag가 이미 있기 때문에 여기에서는 굳이 <div>라는 tag를 주지 않아도 된다. -->
+<!-- 아래는 div로 묶은 이유는, <p>와 <img>를 한꺼번에 묶어야 하기 때문이다. -->
+		<div>
+		<h2>ranking of the world's top automakers by market capitalization</h2>
+		<p> Market cap—or market capitalization—refers to the total value of all a
+		company's shares of stock.<br>It is calculated by multiplying the price of a stock
+		by its total number of outstanding shares.<br>For example, a company with 20 million 
+		shares selling at $50 a share would have a market cap of $1 billion.</P>
+		<img src="auto market cap.jpg" width="70%">
+		</div>
+	</div>
 </body>
 </html>
